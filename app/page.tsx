@@ -170,14 +170,14 @@ function HeroSection() {
             className="font-quattrocento font-bold text-[#202020] dark:text-[#EFEFEF] tracking-[-0.04em] leading-[0.92] mb-6 transition-colors"
             style={{ fontSize: "clamp(38px, 10vw, 56px)" }}
           >
-            product designer &amp; creative strategist
+            product designer &amp; creative strateginbst
           </h1>
 
           {/* Social links */}
           <div className="flex items-center gap-4 mb-6">
             {[
             { label: "LINKEDIN", href: "https://linkedin.com/in/sagnikdey" },
-            { label: "TWITTER", href: "https://twitter.com/sagnikdey" },
+            { label: "TWITTER", href: "https://twitter.com/sagnikdoesstuff" },
             { label: "RESUME", href: "/Sagnik_Resume_Product Design.pdf" },
           ].map(({ label, href }) => (
             <a key={label} href={href} target="_blank" rel="noopener noreferrer"
@@ -194,17 +194,17 @@ function HeroSection() {
             className="font-quattrocento font-bold text-[#202020] dark:text-[#BEBEBE] tracking-[-0.04em] leading-relaxed mb-10 transition-colors"
             style={{ fontSize: "clamp(13px, 3.6vw, 16px)" }}
           >
-            Product Design Lead at 7-Eleven, I lead the design of frictionless,
-            omnichannel ecosystems—from the customer-facing mobile app to the
-            intricate back-office and database solutions that power them. My
-            mission is to transform complex retail infrastructure into intuitive
-            digital experiences that scale business growth.
+            Product Design Manager with 15+ years of experience leading UX/UI, design systems, and front-end collaboration across enterprise, healthcare, and startup environments in India, Malaysia, and the US. </p>
+
+<p className="font-quattrocento font-bold text-[#202020] dark:text-[#BEBEBE] tracking-[-0.04em] leading-relaxed mb-10 transition-colors"
+            style={{ fontSize: "clamp(13px, 3.6vw, 16px)" }}>I specialize in building scalable design systems, conducting end-to-end UX research, and translating complex requirements into intuitive, high-impact product experiences for web and mobile platforms. At 7-Eleven Global Solution Center – India, I partner closely with product and engineering to drive design strategy, improve DesignOps, and mentor designers and developers while breaking silos between teams. 
+
           </p>
 
           {/* Project cards */}
           <div className="flex flex-col gap-3">
-            <ProjectCard number="01" title="Tawazon Redesign" tags={["Case Studies", "Website"]} />
-            <ProjectCard number="02" title="Tawazon Redesign" tags={["Case Studies", "Website"]} />
+            <ProjectCard number="01" title="Tawazon Redesign *coming soon*" tags={["Case Studies", "Website"]} />
+            <ProjectCard number="02" title="QuickStop Mobile App *coming soon*" tags={["Case Studies", "Mobile App"]} />
           </div>
         </div>
       </div>
@@ -233,7 +233,7 @@ function HeroSection() {
           <div className="flex items-center gap-6 mb-8">
             {[
             { label: "LINKEDIN", href: "https://linkedin.com/in/sagnikdey" },
-            { label: "TWITTER", href: "https://twitter.com/sagnikdey" },
+            { label: "TWITTER", href: "https://twitter.com/sagnikdoesstuff" },
             { label: "RESUME", href: "/Sagnik_Resume_Product Design.pdf" },
           ].map(({ label, href }) => (
             <a key={label} href={href} target="_blank" rel="noopener noreferrer"
@@ -249,16 +249,16 @@ function HeroSection() {
             className="font-quattrocento font-bold text-[#202020] dark:text-[#BEBEBE] tracking-[-0.04em] leading-relaxed max-w-[520px] mb-12 transition-colors"
             style={{ fontSize: "clamp(18px, 1.4vw, 20px)" }}
           >
-            Product Design Lead at 7-Eleven, I lead the design of frictionless,
-            omnichannel ecosystems—from the customer-facing mobile app to the
-            intricate back-office and database solutions that power them. My
-            mission is to transform complex retail infrastructure into intuitive
-            digital experiences that scale business growth.
+            Product Design Manager with 15+ years of experience leading UX/UI, design systems, and front-end collaboration across enterprise, healthcare, and startup environments in India, Malaysia, and the US. 
+          </p>
+          <p className="font-quattrocento font-bold text-[#202020] dark:text-[#BEBEBE] tracking-[-0.04em] max-w-[520px] leading-relaxed mb-10 transition-colors"
+            style={{ fontSize: "clamp(18px, 3.6vw, 16px)" }}>I specialize in building scalable design systems, conducting end-to-end UX research, and translating complex requirements into intuitive, high-impact product experiences for web and mobile platforms. At 7-Eleven Global Solution Center – India, I partner closely with product and engineering to drive design strategy, improve DesignOps, and mentor designers and developers while breaking silos between teams. 
+
           </p>
 
-          <div className="flex flex-col gap-4 max-w-[620px]">
-            <ProjectCard number="01" title="Tawazon Redesign" tags={["Case Studies", "Website"]} />
-            <ProjectCard number="02" title="Tawazon Redesign" tags={["Case Studies", "Website"]} />
+          <div className="flex flex-col gap-4 max-w-[520px]">
+            <ProjectCard number="01" title="Tawazon Redesign *coming soon*" tags={["Case Studies", "Website"]} />
+            <ProjectCard number="02" title="QuickStop MObile App *coming soon*" tags={["Case Studies", "Mobile App"]} />
           </div>
         </div>
 
