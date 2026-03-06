@@ -159,7 +159,7 @@ function HeroSection() {
 
           {/* Small heading */}
           <p
-            className="font-quattrocento font-bold text-[#202020] dark:text-[#EFEFEF] mb-2 tracking-[-0.04em] transition-colors"
+            className="font-quattrocento font-bold text-[#202020] dark:text-[#EFEFEF] mb-4 tracking-[-0.04em] transition-colors"
             style={{ fontSize: "22px", lineHeight: 1 }}
           >
             Hi, I&apos;m Sagnik — a...
@@ -168,9 +168,9 @@ function HeroSection() {
           {/* Main heading */}
           <h1
             className="font-quattrocento font-bold text-[#202020] dark:text-[#EFEFEF] tracking-[-0.04em] leading-[0.92] mb-6 transition-colors"
-            style={{ fontSize: "clamp(38px, 10vw, 56px)" }}
+            style={{ fontSize: "clamp(38px, 10vw, 48px)" }}
           >
-            product designer &amp; creative strateginbst
+            product designer &amp; creative strategist
           </h1>
 
           {/* Social links */}
