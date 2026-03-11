@@ -59,7 +59,7 @@ export function Navbar() {
       <div className="flex items-center gap-4 md:gap-6">
         <Link
           href="/portfolio"
-          className="hidden md:block text-[12px] font-bold tracking-[0.12em] uppercase text-[#202020] dark:text-[#F0F0F0] hover:opacity-50 transition-opacity"
+          className="md:block text-[12px] font-bold tracking-[0.12em] uppercase text-[#202020] dark:text-[#F0F0F0] hover:opacity-50 transition-opacity"
         >
           Portfolio
         </Link>
@@ -70,9 +70,9 @@ export function Navbar() {
         >
           {isDark ? <Sun size={20} /> : <Moon size={20} />}
         </button>
-        <button aria-label="Open menu">
+        {/* <button aria-label="Open menu">
           <MenuIcon isDark={isDark} />
-        </button>
+        </button> */}
       </div>
     </nav>
   );

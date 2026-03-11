@@ -108,7 +108,7 @@ function HeroSection() {
           <div className="flex items-center gap-4 mb-6">
             {[
             { label: "LINKEDIN", href: "https://linkedin.com/in/sagnikdey" },
-            { label: "TWITTER", href: "https://twitter.com/sagnikdoesstuff" },
+            //{ label: "TWITTER", href: "https://twitter.com/sagnikdoesstuff" },
             { label: "RESUME", href: "/Sagnik_Resume_Product Design.pdf" },
           ].map(({ label, href }) => (
             <a key={label} href={href} target="_blank" rel="noopener noreferrer"
@@ -122,12 +122,12 @@ function HeroSection() {
 
           {/* Bio */}
           <p
-            className="font-quattrocento font-bold text-[#202020] dark:text-[#BEBEBE] tracking-[-0.04em] leading-relaxed mb-10 transition-colors"
+            className="font-quattrocento font-normal text-[#202020] dark:text-[#BEBEBE] tracking-[-0.04em] leading-relaxed mb-10 transition-colors"
             style={{ fontSize: "clamp(13px, 3.6vw, 16px)" }}
           >
             Product Design Manager with 15+ years of experience leading UX/UI, design systems, and front-end collaboration across enterprise, healthcare, and startup environments in India, Malaysia, and the US. </p>
 
-<p className="font-quattrocento font-bold text-[#202020] dark:text-[#BEBEBE] tracking-[-0.04em] leading-relaxed mb-10 transition-colors"
+<p className="font-quattrocento  text-[#202020] dark:text-[#BEBEBE] tracking-[-0.04em] leading-relaxed mb-10 transition-colors"
             style={{ fontSize: "clamp(13px, 3.6vw, 16px)" }}>I specialize in building scalable design systems, conducting end-to-end UX research, and translating complex requirements into intuitive, high-impact product experiences for web and mobile platforms. At 7-Eleven Global Solution Center – India, I partner closely with product and engineering to drive design strategy, improve DesignOps, and mentor designers and developers while breaking silos between teams. 
 
           </p>
@@ -164,7 +164,7 @@ function HeroSection() {
           <div className="flex items-center gap-6 mb-8">
             {[
             { label: "LINKEDIN", href: "https://linkedin.com/in/sagnikdey" },
-            { label: "TWITTER", href: "https://twitter.com/sagnikdoesstuff" },
+            //{ label: "TWITTER", href: "https://twitter.com/sagnikdoesstuff" },
             { label: "RESUME", href: "/Sagnik_Resume_Product Design.pdf" },
           ].map(({ label, href }) => (
             <a key={label} href={href} target="_blank" rel="noopener noreferrer"
@@ -177,13 +177,13 @@ function HeroSection() {
           </div>
 
           <p
-            className="font-quattrocento font-bold text-[#202020] dark:text-[#BEBEBE] tracking-[-0.04em] leading-relaxed max-w-[520px] mb-12 transition-colors"
+            className="font-quattrocento  text-[#202020] dark:text-[#BEBEBE] tracking-[-0.04em] leading-relaxed max-w-[620px] mb-12 transition-colors"
             style={{ fontSize: "clamp(18px, 1.4vw, 20px)" }}
           >
             Product Design Manager with 15+ years of experience leading UX/UI, design systems, and front-end collaboration across enterprise, healthcare, and startup environments in India, Malaysia, and the US. 
           </p>
-          <p className="font-quattrocento font-bold text-[#202020] dark:text-[#BEBEBE] tracking-[-0.04em] max-w-[520px] leading-relaxed mb-10 transition-colors"
-            style={{ fontSize: "clamp(18px, 3.6vw, 16px)" }}>I specialize in building scalable design systems, conducting end-to-end UX research, and translating complex requirements into intuitive, high-impact product experiences for web and mobile platforms. I partner closely with product and engineering to drive design strategy, improve DesignOps, and mentor designers and developers while breaking silos between teams. 
+          <p className="font-quattrocento  text-[#202020] dark:text-[#BEBEBE] tracking-[-0.04em] max-w-[620px] leading-relaxed mb-10 transition-colors"
+            style={{ fontSize: "clamp(18px, 1.4vw, 20px)" }}>I specialize in building scalable design systems, conducting end-to-end UX research, and translating complex requirements into intuitive, high-impact product experiences for web and mobile platforms. I partner closely with product and engineering to drive design strategy, improve DesignOps, and mentor designers and developers while breaking silos between teams. 
 
           </p>
 
@@ -379,26 +379,15 @@ function AboutSection() {
       </h2>
 
       <div
-        className="max-w-[900px] space-y-6 md:space-y-10 text-[#1a1a1a] dark:text-[#AAAAAA] leading-tight transition-colors"
-        style={{ fontSize: "clamp(16px, 2.1vw, 34px)" }}
+        className="font-quattrocento  max-w-[900px] space-y-6 md:space-y-10 text-[#1a1a1a] dark:text-[#AAAAAA] leading-relaxed transition-colors"
+        style={{ fontSize: "clamp(16px, 1.4vw, 20px)" }}
       >
         <p>
-          Over the past decade and a half, this journey has gone from pushing
-          pixels to pushing product strategy—proof that spending too much time in
-          Figma can accidentally turn you into a people and process person. It
-          began in the world of UI and frontend development, handcoding HTML and
-          CSS and discovering that if something looked broken, it was usually a
-          missing semicolon… or the designer.
-        </p>
-        <p>
-          Curiosity about how and why people actually use products led deeper
-          into SaaS and UX, where user research, prototyping, and
-          cross-functional debates over &apos;just one more iteration&apos; became part of
-          daily life. Working on data-heavy, digitally-native, business-critical
-          products made it clear that good design is less about Dribbble shots
-          and more about quietly fixing the things that used to make users
-          rage-click.
-        </p>
+        Focused on UX/UI, design systems, design leadership, and AI‑led front‑end development, I sit at the intersection of product, design, and engineering, helping teams make better decisions, ship faster, and build experiences that are both user‑centered and technically realistic.</p>
+        <p>Over nearly two decades, I’ve worked across in‑house, agency, and freelance roles, designing for enterprise platforms, marketplaces, and healthcare and consumer products. My path has taken me from front‑end designer and UI roles at companies like Tangelo, Tata Consultancy Services, and Bazaarvoice into senior UX and product design positions, and eventually into leading teams and practices. Along the way, I’ve built a toolkit that spans UX research, interaction design, system thinking, and implementation awareness, which lets me stay involved from early discovery to production‑ready delivery.</p>
+        <p>As a Product Design Manager, I partner closely with product managers, engineers, and designers to align short‑term priorities with a clear long‑term product vision. I facilitate workshops and design reviews, connect dependencies across products and services, and champion accessible, data‑informed design decisions at every stage of the process. A big part of my work is breaking down silos between designers and developers—turning design systems into real, reusable code, optimizing Jira workflows, and building processes that make collaboration the default instead of an exception.</p>
+        <p>Mentorship and design culture are core to how I operate. I coach designers and developers on both craft and communication, helping them grow while scaling design practices through documented frameworks, playbooks, and decision‑making guides. I care deeply about building teams that share patterns, critique generously, and see design systems as living products rather than static libraries.</p>
+        <p>My freelance and independent work has kept me close to the realities of different types of organizations—from startups and healthcare products like DoctorOnCall to self‑employed UX and product design engagements where I’ve had to wear multiple hats at once. Those experiences trained me to quickly frame problems, prioritize impact, and adapt my process to fit the context rather than forcing a one‑size‑fits‑all approach.</p>
       </div>
     </section>
   );
