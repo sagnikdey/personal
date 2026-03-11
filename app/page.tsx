@@ -123,12 +123,12 @@ function HeroSection() {
           {/* Bio */}
           <p
             className="font-quattrocento font-normal text-[#202020] dark:text-[#BEBEBE] tracking-[-0.04em] leading-relaxed mb-10 transition-colors"
-            style={{ fontSize: "clamp(13px, 3.6vw, 16px)" }}
+            style={{ fontSize: "clamp(16px, 3.6vw, 18px)" }}
           >
             Product Design Manager with 15+ years of experience leading UX/UI, design systems, and front-end collaboration across enterprise, healthcare, and startup environments in India, Malaysia, and the US. </p>
 
 <p className="font-quattrocento  text-[#202020] dark:text-[#BEBEBE] tracking-[-0.04em] leading-relaxed mb-10 transition-colors"
-            style={{ fontSize: "clamp(13px, 3.6vw, 16px)" }}>I specialize in building scalable design systems, conducting end-to-end UX research, and translating complex requirements into intuitive, high-impact product experiences for web and mobile platforms. At 7-Eleven Global Solution Center – India, I partner closely with product and engineering to drive design strategy, improve DesignOps, and mentor designers and developers while breaking silos between teams. 
+            style={{ fontSize: "clamp(16px, 3.6vw, 18px)" }}>I specialize in building scalable design systems, conducting end-to-end UX research, and translating complex requirements into intuitive, high-impact product experiences for web and mobile platforms. At 7-Eleven Global Solution Center – India, I partner closely with product and engineering to drive design strategy, improve DesignOps, and mentor designers and developers while breaking silos between teams. 
 
           </p>
 
@@ -286,7 +286,7 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
       </div> */}
 
       {/* Quote */}
-      <p className="flex-1 text-[#202020] dark:text-[#DEDEDE] text-[17px] italic leading-[1.55] transition-colors">
+      <p className="font-quattrocento flex-1 text-[#202020] dark:text-[#DEDEDE] text-[18px] italic leading-[1.55] transition-colors">
         <QuoteText text={testimonial.quote} />
       </p>
 
