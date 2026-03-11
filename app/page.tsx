@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Layers, Zap, Star, MessageSquare, ChevronLeft, ChevronRight } from "lucide-react";
 import { testimonials, type Testimonial } from "./testimonials";
 import { Navbar } from "@/components/site-nav";
@@ -23,10 +24,11 @@ interface ProjectCardProps {
   number: string;
   title: string;
   tags: string[];
+  href?: string;
 }
 
-function ProjectCard({ number, title, tags }: ProjectCardProps) {
-  return (
+function ProjectCard({ number, title, tags, href }: ProjectCardProps) {
+  const card = (
     <div className="relative overflow-hidden rounded-3xl bg-black dark:bg-[#1c1c1c] px-5 md:px-6 py-7 md:py-9 flex items-end justify-between h-[180px] md:h-[240px] cursor-pointer hover:opacity-90 transition-opacity">
       <div className="flex flex-col justify-between h-full">
         <div className="flex gap-2">
@@ -50,6 +52,7 @@ function ProjectCard({ number, title, tags }: ProjectCardProps) {
       </span>
     </div>
   );
+  return href ? <Link href={href}>{card}</Link> : card;
 }
 
 // ─── Hero Section ─────────────────────────────────────────────────────────────
@@ -134,8 +137,8 @@ function HeroSection() {
 
           {/* Project cards */}
           <div className="flex flex-col gap-3">
-            <ProjectCard number="01" title="Tawazon Redesign *coming soon*" tags={["Case Studies", "Website"]} />
-            <ProjectCard number="02" title="QuickStop Mobile App *coming soon*" tags={["Case Studies", "Mobile App"]} />
+            <ProjectCard number="01" title="DOC – Health Services: The Providers" tags={["Case Study", "Healthcare"]} href="/portfolio/doc-health-services" />
+            <ProjectCard number="02" title="DOC – Health Services: The Users" tags={["Case Study", "Healthcare"]} href="/portfolio/doc-health-services-users" />
           </div>
         </div>
       </div>
@@ -188,8 +191,8 @@ function HeroSection() {
           </p>
 
           <div className="flex flex-col gap-4 max-w-[520px]">
-            <ProjectCard number="01" title="Tawazon Redesign *coming soon*" tags={["Case Studies", "Website"]} />
-            <ProjectCard number="02" title="QuickStop MObile App *coming soon*" tags={["Case Studies", "Mobile App"]} />
+            <ProjectCard number="01" title="DOC – Health Services: The Providers" tags={["Case Study", "Healthcare"]} href="/portfolio/doc-health-services" />
+            <ProjectCard number="02" title="DOC – Health Services: The Users" tags={["Case Study", "Healthcare"]} href="/portfolio/doc-health-services-users" />
           </div>
         </div>
 
