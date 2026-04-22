@@ -9,7 +9,7 @@ const tags = ["Market Research", "User Interviews", "Wireframes"];
 
 export default function DocHealthServicesPage() {
   return (
-    <main className="bg-[#F5F5F5] dark:bg-[#111111] transition-colors duration-300">
+    <main className="bg-site-canvas transition-colors duration-300">
       <Navbar />
 
       {/* ══ Two-column layout: scrolling left + sticky right panel ══ */}
@@ -24,7 +24,7 @@ export default function DocHealthServicesPage() {
             {/* Back */}
             <Link
               href="/portfolio"
-              className="inline-flex items-center gap-1.5 text-[12px] font-bold tracking-widest uppercase text-[#202020]/40 dark:text-white/30 hover:text-[#FF522F] dark:hover:text-[#FF522F] transition-colors mb-8 md:mb-12"
+              className="inline-flex items-center gap-1.5 text-[12px] font-bold tracking-widest uppercase text-site-label hover:text-site-accent transition-colors mb-8 md:mb-12"
             >
               <ArrowLeft size={13} strokeWidth={2.5} />
               Portfolio
@@ -35,7 +35,7 @@ export default function DocHealthServicesPage() {
               {tags.map((tag) => (
                 <span
                   key={tag}
-                  className="bg-white dark:bg-[#1e1e1e] text-[#202020] dark:text-white text-[13px] md:text-[16px] font-medium rounded-2xl px-3.5 py-1.5 transition-colors"
+                  className="bg-site-surface-tag text-site-fg text-sm md:text-base font-medium rounded-2xl px-3.5 py-1.5 transition-colors"
                 >
                   {tag}
                 </span>
@@ -44,8 +44,7 @@ export default function DocHealthServicesPage() {
 
             {/* Title */}
             <h1
-              className="font-quattrocento font-bold text-[#202020] dark:text-[#EFEFEF] tracking-[-0.04em] leading-[0.88] mb-8 md:mb-12 transition-colors"
-              style={{ fontSize: "clamp(34px, 5.8vw, 94px)" }}
+              className="type-case-hero-title font-quattrocento font-bold text-site-fg tracking-[-0.04em] leading-[0.88] mb-8 md:mb-12 transition-colors"
             >
               DOC –{" "}
               <br className="hidden md:block" />
@@ -57,18 +56,18 @@ export default function DocHealthServicesPage() {
             {/* Meta row */}
             <div className="flex flex-wrap gap-x-10 gap-y-2">
               <div>
-                <p className="text-[11px] font-bold tracking-[0.12em] uppercase text-[#202020]/40 dark:text-white/30 mb-0.5 transition-colors">
+                <p className="text-[11px] font-bold tracking-[0.12em] uppercase text-site-label mb-0.5 transition-colors">
                   Team
                 </p>
-                <p className="font-quattrocento font-bold text-[#202020] dark:text-[#EFEFEF] text-[15px] transition-colors">
+                <p className="font-quattrocento font-bold text-site-fg text-[15px] transition-colors">
                   3 — Business, Junior Designer, Me
                 </p>
               </div>
               <div>
-                <p className="text-[11px] font-bold tracking-[0.12em] uppercase text-[#202020]/40 dark:text-white/30 mb-0.5 transition-colors">
+                <p className="text-[11px] font-bold tracking-[0.12em] uppercase text-site-label mb-0.5 transition-colors">
                   Client
                 </p>
-                <p className="font-quattrocento font-bold text-[#202020] dark:text-[#EFEFEF] text-[15px] transition-colors">
+                <p className="font-quattrocento font-bold text-site-fg text-[15px] transition-colors">
                   DoctorOnCall
                 </p>
               </div>
@@ -181,10 +180,9 @@ export default function DocHealthServicesPage() {
                 "If a needed item doesn&apos;t exist, providers submit a request for it to be added to the database.",
               ].map((text, i) => (
                 <li key={i} className="flex gap-3">
-                  <span className="mt-[5px] w-1.5 h-1.5 rounded-full bg-[#FF522F] shrink-0" />
+                  <span className="mt-[5px] w-1.5 h-1.5 rounded-full bg-site-accent shrink-0" />
                   <span
-                    className="font-quattrocento font-bold text-[#202020] dark:text-[#BEBEBE] tracking-[-0.03em] leading-relaxed transition-colors"
-                    style={{ fontSize: "clamp(14px, 1.1vw, 17px)" }}
+                    className="text-site-fg-body tracking-[-0.03em] leading-relaxed transition-colors"
                     dangerouslySetInnerHTML={{ __html: text }}
                   />
                 </li>
@@ -264,8 +262,7 @@ export default function DocHealthServicesPage() {
 
         {/* ── Right: sticky black panel — full viewport height ── */}
         <div
-          className="hidden md:block shrink-0 bg-black dark:bg-[#f0f0f0] sticky top-0 h-screen rounded-bl-3xl transition-colors duration-300"
-          style={{ width: "clamp(200px, 26vw, 450px)" }}
+          className="hidden md:block shrink-0 bg-site-surface-inverse w-site-portfolio-rail sticky top-0 h-screen rounded-bl-3xl transition-colors duration-300"
         />
       </div>
     </main>
@@ -283,7 +280,7 @@ function Section({
 }) {
   return (
     <section className="pt-12 md:pt-16">
-      <p className="text-[11px] font-bold tracking-[0.14em] uppercase text-[#202020]/40 dark:text-white/30 mb-4 md:mb-5 transition-colors">
+      <p className="type-case-section-label uppercase text-site-label mb-4 md:mb-5 transition-colors">
         {label}
       </p>
       {children}
@@ -300,8 +297,7 @@ function BodyText({
 }) {
   return (
     <p
-      className={`font-quattrocento font-bold text-[#202020] dark:text-[#BEBEBE] tracking-[-0.03em] leading-relaxed transition-colors ${className}`}
-      style={{ fontSize: "clamp(15px, 1.2vw, 18px)" }}
+      className={`text-site-fg-body tracking-[-0.03em] leading-relaxed transition-colors ${className}`}
     >
       {children}
     </p>
@@ -317,8 +313,7 @@ function ProblemLabel({
 }) {
   return (
     <h3
-      className={`font-quattrocento font-bold text-[#202020] dark:text-[#EFEFEF] tracking-[-0.03em] leading-tight transition-colors ${className}`}
-      style={{ fontSize: "clamp(18px, 1.8vw, 26px)" }}
+      className={`type-case-problem font-quattrocento font-bold text-site-fg tracking-[-0.03em] leading-tight transition-colors ${className}`}
     >
       {children}
     </h3>
@@ -338,20 +333,20 @@ function ProcessBlock({
     <div
       className={`rounded-2xl p-5 md:p-6 ${
         dark
-          ? "bg-[#202020] dark:bg-[#1c1c1c]"
-          : "bg-white dark:bg-[#1a1a1a]"
+          ? "bg-site-surface-code"
+          : "bg-site-surface-raised"
       } transition-colors`}
     >
       <p
-        className={`text-[11px] font-bold tracking-[0.14em] uppercase mb-3 ${
-          dark ? "text-white/40" : "text-[#202020]/40 dark:text-white/30"
+        className={`type-case-section-label uppercase mb-3 ${
+          dark ? "text-site-on-inverse-dim" : "text-site-label"
         }`}
       >
         {label}
       </p>
       <p
-        className={`font-quattrocento font-bold tracking-[-0.03em] leading-relaxed text-[14px] md:text-[15px] ${
-          dark ? "text-white/80" : "text-[#202020] dark:text-[#BEBEBE]"
+        className={`font-quattrocento tracking-[-0.03em] leading-relaxed text-[14px] md:text-[15px] ${
+          dark ? "text-site-on-inverse-body" : "text-site-fg-body"
         } transition-colors`}
       >
         {children}
@@ -373,18 +368,17 @@ function CaseImage({
 }) {
   return (
     <figure className={`${className}`}>
-      <div className="relative w-full overflow-hidden rounded-2xl bg-white dark:bg-[#1a1a1a] transition-colors">
+      <div className="relative w-full overflow-hidden rounded-2xl bg-site-surface-raised transition-colors">
         <Image
           src={src}
           alt={alt}
           width={1200}
           height={800}
-          className="w-full h-auto object-contain"
-          style={{ display: "block" }}
+          className="w-full h-auto object-contain block"
         />
       </div>
       {caption && (
-        <figcaption className="mt-2.5 text-[12px] font-semibold tracking-wide text-[#202020]/40 dark:text-white/30 transition-colors">
+        <figcaption className="mt-2.5 text-[12px] font-semibold tracking-wide text-site-caption transition-colors">
           {caption}
         </figcaption>
       )}
@@ -394,6 +388,6 @@ function CaseImage({
 
 function Divider() {
   return (
-    <hr className="border-none border-t border-black/10 dark:border-white/10 mt-0 transition-colors" style={{ borderTopWidth: "1px" }} />
+    <hr className="border-none border-t border-black/10 dark:border-white/10 mt-0 transition-colors" />
   );
 }

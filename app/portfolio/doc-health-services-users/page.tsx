@@ -9,7 +9,7 @@ const tags = ["Market Research", "User Interviews", "User Personas", "Wireframes
 
 export default function DocHealthServicesUsersPage() {
   return (
-    <main className="bg-[#F5F5F5] dark:bg-[#111111] transition-colors duration-300">
+    <main className="bg-site-canvas transition-colors duration-300">
       <Navbar />
 
       <div className="flex pt-[65px] md:pt-[76px]">
@@ -21,7 +21,7 @@ export default function DocHealthServicesUsersPage() {
           <div className="px-6 md:pl-[6.6vw] md:pr-[5vw] pt-8 md:pt-14 pb-14">
             <Link
               href="/portfolio"
-              className="inline-flex items-center gap-1.5 text-[12px] font-bold tracking-widest uppercase text-[#202020]/40 dark:text-white/30 hover:text-[#FF522F] dark:hover:text-[#FF522F] transition-colors mb-8 md:mb-12"
+              className="inline-flex items-center gap-1.5 text-[12px] font-bold tracking-widest uppercase text-site-label hover:text-site-accent transition-colors mb-8 md:mb-12"
             >
               <ArrowLeft size={13} strokeWidth={2.5} />
               Portfolio
@@ -31,7 +31,7 @@ export default function DocHealthServicesUsersPage() {
               {tags.map((tag) => (
                 <span
                   key={tag}
-                  className="bg-white dark:bg-[#1e1e1e] text-[#202020] dark:text-white text-[13px] md:text-[15px] font-medium rounded-2xl px-3.5 py-1.5 transition-colors"
+                  className="bg-site-surface-tag text-site-fg text-sm md:text-base font-medium rounded-2xl px-3.5 py-1.5 transition-colors"
                 >
                   {tag}
                 </span>
@@ -39,8 +39,7 @@ export default function DocHealthServicesUsersPage() {
             </div>
 
             <h1
-              className="font-quattrocento font-bold text-[#202020] dark:text-[#EFEFEF] tracking-[-0.04em] leading-[0.88] mb-8 md:mb-12 transition-colors"
-              style={{ fontSize: "clamp(34px, 5.8vw, 94px)" }}
+              className="type-case-hero-title font-quattrocento font-bold text-site-fg tracking-[-0.04em] leading-[0.88] mb-8 md:mb-12 transition-colors"
             >
               DOC –{" "}
               <br className="hidden md:block" />
@@ -51,18 +50,18 @@ export default function DocHealthServicesUsersPage() {
 
             <div className="flex flex-wrap gap-x-10 gap-y-2">
               <div>
-                <p className="text-[11px] font-bold tracking-[0.12em] uppercase text-[#202020]/40 dark:text-white/30 mb-0.5 transition-colors">
+                <p className="text-[11px] font-bold tracking-[0.12em] uppercase text-site-label mb-0.5 transition-colors">
                   Role
                 </p>
-                <p className="font-quattrocento font-bold text-[#202020] dark:text-[#EFEFEF] text-[15px] transition-colors">
+                <p className="font-quattrocento font-bold text-site-fg text-[15px] transition-colors">
                   Sole Designer
                 </p>
               </div>
               <div>
-                <p className="text-[11px] font-bold tracking-[0.12em] uppercase text-[#202020]/40 dark:text-white/30 mb-0.5 transition-colors">
+                <p className="text-[11px] font-bold tracking-[0.12em] uppercase text-site-label mb-0.5 transition-colors">
                   Client
                 </p>
-                <p className="font-quattrocento font-bold text-[#202020] dark:text-[#EFEFEF] text-[15px] transition-colors">
+                <p className="font-quattrocento font-bold text-site-fg text-[15px] transition-colors">
                   DoctorOnCall
                 </p>
               </div>
@@ -163,11 +162,11 @@ export default function DocHealthServicesUsersPage() {
                     />
                   </CompetitorBlock>
 
-                  <div className="bg-white dark:bg-[#1a1a1a] rounded-2xl px-5 py-4 transition-colors">
-                    <p className="text-[11px] font-bold tracking-[0.14em] uppercase text-[#202020]/40 dark:text-white/30 mb-2">
+                  <div className="bg-site-surface-raised rounded-2xl px-5 py-4 transition-colors">
+                    <p className="type-case-section-label uppercase text-site-label mb-2">
                       Other Providers Reviewed
                     </p>
-                    <p className="font-quattrocento font-bold text-[#202020] dark:text-[#BEBEBE] text-[14px] tracking-[-0.03em] transition-colors">
+                    <p className="font-quattrocento text-site-fg-body text-[14px] tracking-[-0.03em] transition-colors">
                       BP Healthcare · Sehatq (Indonesia) · Gleneagles Hospital Malaysia · Lifecare
                     </p>
                   </div>
@@ -240,10 +239,9 @@ export default function DocHealthServicesUsersPage() {
                     "Online reports",
                   ].map((item, i) => (
                     <li key={i} className="flex gap-3">
-                      <span className="mt-[6px] w-1.5 h-1.5 rounded-full bg-[#FF522F] shrink-0" />
+                      <span className="mt-[6px] w-1.5 h-1.5 rounded-full bg-site-accent shrink-0" />
                       <span
-                        className="font-quattrocento font-bold text-[#202020] dark:text-[#BEBEBE] tracking-[-0.03em] leading-relaxed transition-colors"
-                        style={{ fontSize: "clamp(14px, 1.1vw, 17px)" }}
+                        className="text-site-fg-body tracking-[-0.03em] leading-relaxed transition-colors"
                       >
                         {item}
                       </span>
@@ -378,8 +376,7 @@ export default function DocHealthServicesUsersPage() {
 
         {/* ── Right: sticky black panel ── */}
         <div
-          className="hidden md:block shrink-0 bg-black dark:bg-[#f0f0f0] sticky top-0 h-screen rounded-bl-3xl transition-colors duration-300"
-          style={{ width: "clamp(200px, 26vw, 450px)" }}
+          className="hidden md:block shrink-0 bg-site-surface-inverse w-site-portfolio-rail sticky top-0 h-screen rounded-bl-3xl transition-colors duration-300"
         />
       </div>
     </main>
@@ -391,7 +388,7 @@ export default function DocHealthServicesUsersPage() {
 function Section({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <section className="pt-12 md:pt-16">
-      <p className="text-[11px] font-bold tracking-[0.14em] uppercase text-[#202020]/40 dark:text-white/30 mb-4 md:mb-5 transition-colors">
+      <p className="type-case-section-label uppercase text-site-label mb-4 md:mb-5 transition-colors">
         {label}
       </p>
       {children}
@@ -402,8 +399,7 @@ function Section({ label, children }: { label: string; children: React.ReactNode
 function BodyText({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   return (
     <p
-      className={`font-quattrocento font-bold text-[#202020] dark:text-[#BEBEBE] tracking-[-0.03em] leading-relaxed transition-colors ${className}`}
-      style={{ fontSize: "clamp(15px, 1.2vw, 18px)" }}
+      className={`text-site-fg-body tracking-[-0.03em] leading-relaxed transition-colors ${className}`}
     >
       {children}
     </p>
@@ -413,8 +409,7 @@ function BodyText({ children, className = "" }: { children: React.ReactNode; cla
 function ProblemLabel({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   return (
     <h3
-      className={`font-quattrocento font-bold text-[#202020] dark:text-[#EFEFEF] tracking-[-0.03em] leading-tight transition-colors ${className}`}
-      style={{ fontSize: "clamp(18px, 1.8vw, 26px)" }}
+      className={`type-case-problem font-quattrocento font-bold text-site-fg tracking-[-0.03em] leading-tight transition-colors ${className}`}
     >
       {children}
     </h3>
@@ -424,18 +419,17 @@ function ProblemLabel({ children, className = "" }: { children: React.ReactNode;
 function CaseImage({ src, alt, caption, className = "" }: { src: string; alt: string; caption?: string; className?: string }) {
   return (
     <figure className={className}>
-      <div className="relative w-full overflow-hidden rounded-2xl bg-white dark:bg-[#1a1a1a] transition-colors">
+      <div className="relative w-full overflow-hidden rounded-2xl bg-site-surface-raised transition-colors">
         <Image
           src={src}
           alt={alt}
           width={1200}
           height={800}
-          className="w-full h-auto object-contain"
-          style={{ display: "block" }}
+          className="w-full h-auto object-contain block"
         />
       </div>
       {caption && (
-        <figcaption className="mt-2.5 text-[12px] font-semibold tracking-wide text-[#202020]/40 dark:text-white/30 transition-colors">
+        <figcaption className="mt-2.5 text-[12px] font-semibold tracking-wide text-site-caption transition-colors">
           {caption}
         </figcaption>
       )}
@@ -459,25 +453,25 @@ function CompetitorBlock({
   return (
     <div className="rounded-2xl overflow-hidden border border-black/8 dark:border-white/8 transition-colors">
       {children}
-      <div className="bg-white dark:bg-[#1a1a1a] px-5 md:px-6 py-5 transition-colors">
-        <p className="font-quattrocento font-bold text-[#202020] dark:text-[#EFEFEF] text-[17px] md:text-[19px] tracking-[-0.03em] mb-0.5 transition-colors">
+      <div className="bg-site-surface-raised px-5 md:px-6 py-5 transition-colors">
+        <p className="font-quattrocento font-bold text-site-fg text-[17px] md:text-[19px] tracking-[-0.03em] mb-0.5 transition-colors">
           {name}
         </p>
         {subtitle && (
-          <p className="text-[12px] text-[#202020]/40 dark:text-white/30 mb-4 transition-colors">
+          <p className="text-[12px] text-site-label mb-4 transition-colors">
             {subtitle}
           </p>
         )}
         <div className="grid md:grid-cols-2 gap-4 mt-4">
           <div>
-            <p className="text-[10px] font-bold tracking-[0.14em] uppercase text-[#202020]/40 dark:text-white/30 mb-2">
+            <p className="text-[10px] font-bold tracking-[0.14em] uppercase text-site-label mb-2">
               Pros
             </p>
             <ul className="space-y-1.5">
               {pros.map((p, i) => (
                 <li key={i} className="flex gap-2">
-                  <span className="mt-[6px] w-1 h-1 rounded-full bg-[#202020]/30 dark:bg-white/30 shrink-0" />
-                  <span className="font-quattrocento font-bold text-[#202020] dark:text-[#BEBEBE] text-[13px] tracking-[-0.02em] leading-snug transition-colors">
+                  <span className="mt-[6px] w-1 h-1 rounded-full bg-site-fg/30 dark:bg-white/30 shrink-0" />
+                  <span className="font-quattrocento text-site-fg-body text-sm tracking-[-0.02em] leading-snug transition-colors">
                     {p}
                   </span>
                 </li>
@@ -485,14 +479,14 @@ function CompetitorBlock({
             </ul>
           </div>
           <div>
-            <p className="text-[10px] font-bold tracking-[0.14em] uppercase text-[#202020]/40 dark:text-white/30 mb-2">
+            <p className="text-[10px] font-bold tracking-[0.14em] uppercase text-site-label mb-2">
               Cons
             </p>
             <ul className="space-y-1.5">
               {cons.map((c, i) => (
                 <li key={i} className="flex gap-2">
-                  <span className="mt-[6px] w-1 h-1 rounded-full bg-[#FF522F]/50 shrink-0" />
-                  <span className="font-quattrocento font-bold text-[#202020] dark:text-[#BEBEBE] text-[13px] tracking-[-0.02em] leading-snug transition-colors">
+                  <span className="mt-[6px] w-1 h-1 rounded-full bg-site-accent/50 shrink-0" />
+                  <span className="font-quattrocento text-site-fg-body text-sm tracking-[-0.02em] leading-snug transition-colors">
                     {c}
                   </span>
                 </li>
@@ -521,12 +515,12 @@ function PersonaCard({
   techHabits: string;
 }) {
   return (
-    <div className="bg-white dark:bg-[#1a1a1a] rounded-2xl px-5 md:px-6 py-5 md:py-6 transition-colors">
+    <div className="bg-site-surface-raised rounded-2xl px-5 md:px-6 py-5 md:py-6 transition-colors">
       <div className="flex items-baseline gap-3 mb-4">
-        <p className="font-quattrocento font-bold text-[#202020] dark:text-[#EFEFEF] text-[17px] md:text-[19px] tracking-[-0.03em] transition-colors">
+        <p className="font-quattrocento font-bold text-site-fg text-[17px] md:text-[19px] tracking-[-0.03em] transition-colors">
           {name}
         </p>
-        <span className="text-[12px] text-[#202020]/40 dark:text-white/30 transition-colors">
+        <span className="text-[12px] text-site-label transition-colors">
           {age} · {job}
         </span>
       </div>
@@ -537,10 +531,10 @@ function PersonaCard({
           { label: "Tech Habits", text: techHabits },
         ].map(({ label, text }) => (
           <div key={label}>
-            <p className="text-[10px] font-bold tracking-[0.14em] uppercase text-[#202020]/40 dark:text-white/30 mb-1.5 transition-colors">
+            <p className="text-[10px] font-bold tracking-[0.14em] uppercase text-site-label mb-1.5 transition-colors">
               {label}
             </p>
-            <p className="font-quattrocento font-bold text-[#202020] dark:text-[#BEBEBE] text-[13px] tracking-[-0.02em] leading-snug transition-colors">
+            <p className="font-quattrocento text-site-fg-body text-sm tracking-[-0.02em] leading-snug transition-colors">
               {text}
             </p>
           </div>
@@ -554,7 +548,6 @@ function Divider() {
   return (
     <hr
       className="border-none border-t border-black/10 dark:border-white/10 mt-0 transition-colors"
-      style={{ borderTopWidth: "1px" }}
     />
   );
 }

@@ -17,6 +17,15 @@ interface PortfolioItem {
 const portfolioItems: PortfolioItem[] = [
   {
     number: "01",
+    title: "Tawazon Redesign",
+    tags: ["UX Research", "Design System", "Web"],
+    year: "",
+    client: "Tawazon",
+    href: "/portfolio/tawazon-redesign",
+    available: true,
+  },
+  {
+    number: "02",
     title: "DOC – Health Services: The Providers",
     tags: ["Market Research", "User Interviews", "Wireframes"],
     year: "",
@@ -25,22 +34,13 @@ const portfolioItems: PortfolioItem[] = [
     available: true,
   },
   {
-    number: "02",
+    number: "03",
     title: "DOC – Health Services: The Users",
     tags: ["User Research", "User Personas", "Wireframes", "Hi-Fi Mocks"],
     year: "",
     client: "DoctorOnCall",
     href: "/portfolio/doc-health-services-users",
     available: true,
-  },
-  {
-    number: "03",
-    title: "Tawazon Redesign",
-    tags: ["UX Research", "Design System", "Web"],
-    year: "",
-    client: "Tawazon",
-    href: "#",
-    available: false,
   },
   {
     number: "04",
@@ -55,7 +55,7 @@ const portfolioItems: PortfolioItem[] = [
 
 export default function PortfolioPage() {
   return (
-    <main className="min-h-screen bg-[#F5F5F5] dark:bg-[#111111] transition-colors duration-300">
+    <main className="min-h-screen bg-site-canvas transition-colors duration-300">
       <Navbar />
 
       {/* Two-column layout */}
@@ -67,14 +67,12 @@ export default function PortfolioPage() {
           {/* Hero heading */}
           <div className="pb-8 md:pb-14 border-b border-black/10 dark:border-white/10">
             <p
-              className="font-quattrocento font-bold text-[#202020] dark:text-[#EFEFEF] tracking-[0.14em] uppercase mb-4 opacity-40 transition-colors"
-              style={{ fontSize: "11px" }}
+              className="type-portfolio-eyebrow font-quattrocento font-bold text-site-fg tracking-[0.14em] uppercase mb-4 opacity-40 transition-colors"
             >
               selected work
             </p>
             <h1
-              className="font-quattrocento font-bold text-[#202020] dark:text-[#EFEFEF] tracking-[-0.04em] leading-[0.88] transition-colors"
-              style={{ fontSize: "clamp(52px, 8vw, 120px)" }}
+              className="type-portfolio-title font-quattrocento font-bold text-site-fg tracking-[-0.04em] leading-[0.88] transition-colors"
             >
               portfolio
             </h1>
@@ -93,8 +91,7 @@ export default function PortfolioPage() {
                 >
                   {/* Number */}
                   <span
-                    className="font-quattrocento font-bold text-[#202020] dark:text-white leading-none shrink-0 transition-colors"
-                    style={{ fontSize: "clamp(22px, 3vw, 42px)", opacity: 0.18 }}
+                    className="type-portfolio-item-number font-quattrocento font-bold text-site-fg opacity-[0.18] leading-none shrink-0 transition-colors"
                   >
                     {item.number}
                   </span>
@@ -102,8 +99,7 @@ export default function PortfolioPage() {
                   {/* Content */}
                   <div className="flex-1 min-w-0">
                     <h2
-                      className="font-quattrocento font-bold text-[#202020] dark:text-[#EFEFEF] tracking-[-0.03em] leading-tight mb-2.5 transition-colors"
-                      style={{ fontSize: "clamp(17px, 2.4vw, 34px)" }}
+                      className="type-portfolio-item-title font-quattrocento font-bold text-site-fg tracking-[-0.03em] leading-tight mb-2.5 transition-colors"
                     >
                       {item.title}
                       {!item.available && (
@@ -116,7 +112,7 @@ export default function PortfolioPage() {
                       {item.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="text-[10px] md:text-[11px] font-semibold tracking-wide uppercase text-[#202020]/50 dark:text-white/40 border border-black/15 dark:border-white/15 rounded px-2 py-0.5"
+                          className="text-[10px] md:text-[11px] font-semibold tracking-wide uppercase text-site-fg/50 border border-site-fg/15 rounded px-2 py-0.5"
                         >
                           {tag}
                         </span>
@@ -126,10 +122,10 @@ export default function PortfolioPage() {
 
                   {/* Meta */}
                   <div className="hidden md:flex flex-col items-end gap-0.5 shrink-0 text-right">
-                    <span className="text-[12px] font-semibold text-[#202020]/40 dark:text-white/30 transition-colors">
+                    <span className="text-[12px] font-semibold text-site-label transition-colors">
                       {item.client}
                     </span>
-                    <span className="text-[12px] text-[#202020]/30 dark:text-white/20 transition-colors">
+                    <span className="text-[12px] text-site-fg/30 transition-colors">
                       {item.year}
                     </span>
                   </div>
@@ -137,7 +133,7 @@ export default function PortfolioPage() {
                   {item.available && (
                     <ArrowRight
                       size={18}
-                      className="text-[#202020]/25 dark:text-white/25 group-hover:text-[#FF522F] group-hover:translate-x-1 transition-all shrink-0"
+                      className="text-site-fg/25 group-hover:text-site-accent group-hover:translate-x-1 transition-all shrink-0"
                     />
                   )}
                 </div>
@@ -155,8 +151,7 @@ export default function PortfolioPage() {
 
           {/* Footer note */}
           <p
-            className="mt-16 md:mt-24 font-quattrocento font-bold text-[#202020]/30 dark:text-white/20 tracking-[-0.03em] transition-colors"
-            style={{ fontSize: "clamp(13px, 1.2vw, 18px)" }}
+            className="type-portfolio-footer-note mt-16 md:mt-24 font-quattrocento text-site-fg/30 tracking-[-0.03em] transition-colors"
           >
             More case studies in progress. Check back soon.
           </p>
@@ -164,8 +159,7 @@ export default function PortfolioPage() {
 
         {/* ── Right: black panel — sticky, full viewport height ── */}
         <div
-          className="hidden md:block shrink-0 bg-black dark:bg-[#f0f0f0] sticky top-0 h-screen rounded-bl-3xl transition-colors duration-300"
-          style={{ width: "clamp(200px, 26vw, 450px)" }}
+          className="hidden md:block shrink-0 bg-site-surface-inverse w-site-portfolio-rail sticky top-0 h-screen rounded-bl-3xl transition-colors duration-300"
         />
       </div>
     </main>

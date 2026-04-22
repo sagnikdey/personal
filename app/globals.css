@@ -7,7 +7,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
+  /* Default UI font = Quattrocento (set on <html> via next/font) */
+  --font-sans: var(--font-quattrocento), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -45,9 +46,97 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
+  /* Site / portfolio design language (replaces ad-hoc hex in components) */
+  --color-site-canvas: var(--site-canvas);
+  --color-site-fg: var(--site-fg);
+  --color-site-fg-on-inverse: var(--site-fg-on-inverse);
+  --color-site-fg-subtle: var(--site-fg-subtle);
+  --color-site-fg-body: var(--site-fg-body);
+  --color-site-fg-prose: var(--site-fg-prose);
+  --color-site-label: var(--site-label);
+  --color-site-caption: var(--site-caption);
+  --color-site-accent: var(--site-accent);
+  --color-site-surface: var(--site-surface);
+  --color-site-surface-raised: var(--site-surface-raised);
+  --color-site-surface-tag: var(--site-surface-tag);
+  --color-site-surface-inverse: var(--site-surface-inverse);
+  --color-site-surface-code: var(--site-surface-code);
+  --color-site-rail: var(--site-rail);
+  --color-site-hero-rail: var(--site-hero-rail);
+  --color-site-nav: var(--site-nav);
+  --color-site-nav-fg: var(--site-nav-fg);
+  --color-site-icon: var(--site-icon);
+  --color-site-quote: var(--site-quote);
+  --color-site-attribution: var(--site-attribution);
+  --color-site-meta: var(--site-meta);
+  --color-site-fade: var(--site-fade);
+  --color-site-project-card: var(--site-project-card);
+  /* Analysis / Tawazon semantic chips */
+  --color-site-severity-critical: var(--site-severity-critical);
+  --color-site-severity-critical-bg: var(--site-severity-critical-bg);
+  --color-site-severity-critical-border: var(--site-severity-critical-border);
+  --color-site-severity-high: var(--site-severity-high);
+  --color-site-severity-high-bg: var(--site-severity-high-bg);
+  --color-site-severity-high-border: var(--site-severity-high-border);
+  --color-site-severity-warn: var(--site-severity-warn);
+  --color-site-severity-warn-bg: var(--site-severity-warn-bg);
+  --color-site-severity-warn-border: var(--site-severity-warn-border);
+  --color-site-teal: var(--site-teal);
+  --color-site-teal-muted: var(--site-teal-muted);
+  --color-site-avatar-bg: var(--site-avatar-bg);
+  --color-site-photo-outline: var(--site-photo-outline);
+  --color-site-on-inverse-dim: var(--site-on-inverse-dim);
+  --color-site-on-inverse-body: var(--site-on-inverse-body);
+  --color-site-pass: var(--site-pass);
+  --color-site-pass-bg: var(--site-pass-bg);
+  --color-site-pass-border: var(--site-pass-border);
 }
 
 :root {
+  /* Shared site palette (portfolio, home, nav) */
+  --site-canvas: #f5f5f5;
+  --site-fg: #202020;
+  --site-fg-on-inverse: #efefef;
+  --site-fg-subtle: #bebebe;
+  --site-fg-body: #202020;
+  --site-fg-prose: #1a1a1a;
+  --site-label: color-mix(in srgb, #202020 40%, transparent);
+  --site-caption: color-mix(in srgb, #202020 40%, transparent);
+  --site-accent: #ff522f;
+  --site-surface: #ffffff;
+  --site-surface-raised: #ffffff;
+  --site-surface-tag: #ffffff;
+  --site-surface-inverse: #000000;
+  --site-surface-code: #202020;
+  --site-rail: #000000;
+  --site-hero-rail: #f5f5f5;
+  --site-nav: #ffffff;
+  --site-nav-fg: #202020;
+  --site-icon: #202020;
+  --site-quote: #202020;
+  --site-attribution: #111111;
+  --site-meta: #888888;
+  --site-fade: #f5f5f5;
+  --site-project-card: #1c1c1c;
+  --site-severity-critical: #c0392b;
+  --site-severity-critical-bg: #fdf0ee;
+  --site-severity-critical-border: color-mix(in srgb, #c0392b 20%, transparent);
+  --site-severity-high: #c8922a;
+  --site-severity-high-bg: #fdf5e8;
+  --site-severity-high-border: color-mix(in srgb, #c8922a 20%, transparent);
+  --site-severity-warn: #4a5568;
+  --site-severity-warn-bg: #f7f8fa;
+  --site-severity-warn-border: color-mix(in srgb, #4a5568 20%, transparent);
+  --site-teal: #1a7a6e;
+  --site-teal-muted: #e8f5f3;
+  --site-pass: #1a7a6e;
+  --site-pass-bg: #e8f5f3;
+  --site-pass-border: color-mix(in srgb, #1a7a6e 20%, transparent);
+  --site-avatar-bg: #1e1e1e;
+  --site-photo-outline: #e8e8e8;
+  --site-on-inverse-dim: color-mix(in srgb, #ffffff 40%, transparent);
+  --site-on-inverse-body: color-mix(in srgb, #ffffff 80%, transparent);
+
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -83,6 +172,49 @@
 }
 
 .dark {
+  --site-canvas: #111111;
+  --site-fg: #efefef;
+  --site-fg-on-inverse: #efefef;
+  --site-fg-subtle: #bebebe;
+  --site-fg-body: #bebebe;
+  --site-fg-prose: #aaaaaa;
+  --site-label: color-mix(in srgb, #ffffff 30%, transparent);
+  --site-caption: color-mix(in srgb, #ffffff 30%, transparent);
+  --site-accent: #ff522f;
+  --site-surface: #1a1a1a;
+  --site-surface-raised: #1a1a1a;
+  --site-surface-tag: #1e1e1e;
+  --site-surface-inverse: #f0f0f0;
+  --site-surface-code: #1c1c1c;
+  --site-rail: #f0f0f0;
+  --site-hero-rail: #f5f5f5;
+  --site-nav: #0f0f0f;
+  --site-nav-fg: #f0f0f0;
+  --site-icon: #f0f0f0;
+  --site-quote: #dedede;
+  --site-attribution: #f0f0f0;
+  --site-meta: #777777;
+  --site-fade: #111111;
+  --site-project-card: #1c1c1c;
+  --site-severity-critical: #c0392b;
+  --site-severity-critical-bg: #fdf0ee;
+  --site-severity-critical-border: color-mix(in srgb, #c0392b 20%, transparent);
+  --site-severity-high: #c8922a;
+  --site-severity-high-bg: #fdf5e8;
+  --site-severity-high-border: color-mix(in srgb, #c8922a 20%, transparent);
+  --site-severity-warn: #4a5568;
+  --site-severity-warn-bg: #f7f8fa;
+  --site-severity-warn-border: color-mix(in srgb, #4a5568 20%, transparent);
+  --site-teal: #1a7a6e;
+  --site-teal-muted: #e8f5f3;
+  --site-pass: #1a7a6e;
+  --site-pass-bg: #e8f5f3;
+  --site-pass-border: color-mix(in srgb, #1a7a6e 20%, transparent);
+  --site-avatar-bg: #333333;
+  --site-photo-outline: #e8e8e8;
+  --site-on-inverse-dim: color-mix(in srgb, #ffffff 40%, transparent);
+  --site-on-inverse-body: color-mix(in srgb, #ffffff 80%, transparent);
+
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
@@ -121,13 +253,92 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-[#F5F5F5] text-[#202020];
+    @apply bg-site-canvas text-site-fg antialiased font-sans;
+    /* Universal body copy: home, portfolio, case studies */
+    font-size: clamp(18px, 1.4vw, 20px);
   }
 }
 
 @layer utilities {
+  /* Kept for backwards compatibility; same as `font-sans` (Quattrocento) */
   .font-quattrocento {
-    font-family: var(--font-quattrocento), system-ui, sans-serif;
+    @apply font-sans;
+  }
+
+  /* Case study / portfolio type scale (body text inherits global `body` size) */
+  .type-case-hero-title {
+    font-size: clamp(34px, 5.8vw, 94px);
+  }
+  .type-case-problem {
+    font-size: clamp(18px, 1.8vw, 26px);
+  }
+  .type-case-section-label {
+    font-weight: 700;
+    letter-spacing: 0.14em;
+  }
+
+  /* Home page */
+  .type-home-hero-mobile {
+    font-size: clamp(38px, 10vw, 48px);
+  }
+  .type-home-hero-desktop {
+    font-size: clamp(42px, 5.4vw, 82px);
+  }
+  .type-home-greeting-mobile {
+    font-size: 22px;
+    line-height: 1;
+  }
+  .type-home-greeting-desktop {
+    font-size: clamp(22px, 2.4vw, 38px);
+    line-height: 1;
+  }
+  .type-section-display {
+    font-size: clamp(40px, 5.4vw, 82px);
+  }
+  .type-project-card-index {
+    font-size: clamp(72px, 18vw, 152px);
+    color: color-mix(in srgb, #ffffff 22%, transparent);
+  }
+
+  .w-site-portfolio-rail {
+    width: clamp(200px, 26vw, 450px);
+  }
+  .w-site-home-hero {
+    width: clamp(240px, 36.5vw, 820px);
+  }
+
+  /* Portfolio index */
+  /* .type-portfolio-eyebrow {
+    font-size: 11px;
+  } */
+  .type-portfolio-title {
+    font-size: clamp(52px, 8vw, 120px);
+  }
+  .type-portfolio-item-number {
+    font-size: clamp(22px, 3vw, 42px);
+  }
+  .type-portfolio-item-title {
+    font-size: clamp(17px, 2.4vw, 34px);
+  }
+  .type-portfolio-footer-note {
+    font-size: clamp(13px, 1.2vw, 18px);
+  }
+
+  .hero-photo-outline-mobile {
+    width: 42%;
+    aspect-ratio: 326 / 257;
+    outline: 2px solid var(--site-photo-outline);
+    outline-offset: -2px;
+  }
+  .hero-panel-fill {
+    top: 0;
+    border-bottom-left-radius: 1.5rem;
+  }
+  .hero-floating-photo {
+    top: 10%;
+    left: 4vw;
+    width: 80%;
+    height: 80%;
   }
 }
 

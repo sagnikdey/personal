@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={quattrocentoSans.variable} suppressHydrationWarning>
-      <body className="antialiased">{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
