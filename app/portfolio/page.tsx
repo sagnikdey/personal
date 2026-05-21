@@ -17,6 +17,15 @@ interface PortfolioItem {
 const portfolioItems: PortfolioItem[] = [
   {
     number: "01",
+    title: "QuickStop Mobile App",
+    tags: ["Mobile", "End-to-End UX", "iOS"],
+    year: "2024",
+    client: "Personal Project",
+    href: "/portfolio/quickstop-ios",
+    available: true,
+  },
+  {
+    number: "02",
     title: "Tawazon Redesign",
     tags: ["UX Research", "Design System", "Web"],
     year: "",
@@ -25,7 +34,7 @@ const portfolioItems: PortfolioItem[] = [
     available: true,
   },
   {
-    number: "02",
+    number: "03",
     title: "DOC – Health Services: The Providers",
     tags: ["Market Research", "User Interviews", "Wireframes"],
     year: "",
@@ -34,21 +43,12 @@ const portfolioItems: PortfolioItem[] = [
     available: true,
   },
   {
-    number: "03",
+    number: "04",
     title: "DOC – Health Services: The Users",
     tags: ["User Research", "User Personas", "Wireframes", "Hi-Fi Mocks"],
     year: "",
     client: "DoctorOnCall",
     href: "/portfolio/doc-health-services-users",
-    available: true,
-  },
-  {
-    number: "04",
-    title: "QuickStop Mobile App",
-    tags: ["Mobile", "End-to-End UX", "iOS"],
-    year: "2024",
-    client: "Personal Project",
-    href: "/portfolio/quickstop-ios",
     available: true,
   },
 ];

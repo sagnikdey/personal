@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ArrowLeft, ChevronDown } from "lucide-react";
 import { Navbar } from "@/components/site-nav";
 
-const tags = ["Heuristic Evaluation", "Competitive Research", "Information Architecture"];
+const tags = ["Heuristic Evaluation", "Competitive Research", "Information Architecture", "AI-assisted Development"];
 
 export default function TawazonRedesignPage() {
   return (
@@ -502,6 +502,132 @@ export default function TawazonRedesignPage() {
 
               </Section>
 
+              <Divider />
+
+              {/* ── AI-Assisted Development ── */}
+              <Section label="AI-Assisted Development">
+                <BodyText>
+                  The redesign was built as a Next.js 15 app with Tailwind CSS and Shadcn/ui — using Cursor with Claude Sonnet as the development accelerant. Research and IA came first; components shipped once the design system and data models were locked.
+                </BodyText>
+
+                <div className="mt-6 grid grid-cols-2 md:grid-cols-3 gap-3">
+                  {[
+                    { label: "Framework", value: "Next.js 15 (App Router)" },
+                    { label: "Styling", value: "Tailwind CSS" },
+                    { label: "Components", value: "Shadcn/ui" },
+                    { label: "AI-assisted dev", value: "Cursor + Claude Sonnet" },
+                    { label: "Design research", value: "9-competitor analysis" },
+                    { label: "IA methodology", value: "Nielsen's 10 heuristics" },
+                  ].map(({ label, value }) => (
+                    <div key={label} className="bg-site-surface-raised rounded-xl px-4 py-3 transition-colors">
+                      <p className="text-[10px] font-bold tracking-[0.08em] uppercase text-site-label mb-1 transition-colors">
+                        {label}
+                      </p>
+                      <p className="font-quattrocento text-site-fg text-[13px] tracking-[-0.02em] leading-snug transition-colors">
+                        {value}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                <SubHeading className="mt-10">How Cursor changed the build</SubHeading>
+                <BodyText className="mt-4">
+                  Less like autocomplete — more like a senior dev who has also read all the documentation. Once the design system was established (Tailwind config, colour tokens, typography scale), plain-language prompts produced production-quality TSX that needed only light refinement.
+                </BodyText>
+
+                <div className="mt-6 space-y-3">
+                  <DevWorkflowCard
+                    title="Component generation at speed"
+                    desc="IndustryPageWithHeader, KpiStatGrid, LocationsOffices, and WorldMapWithMarkers all started as Cursor prompts. Shadcn's unstyled-but-accessible components (Button, Dialog, Sheet, Badge, Field) extended cleanly — field.tsx became the workhorse across contact forms, RFQ inputs, and future portal screens."
+                  />
+                  <DevWorkflowCard
+                    title="App Router architecture"
+                    desc="Next.js 15 file-system routing mapped directly to the IA — one dynamic [segment] template drives all 8 industry pages from shared data, eliminating copy-paste drift. Server Components for static pages; Client Components only where interactivity was needed (language switcher, contact form, mega-menu)."
+                  />
+                  <DevWorkflowCard
+                    title="Cursor for refactoring"
+                    desc="When page-modules.tsx started doing too much, describing the problem yielded a clean split into section-header.tsx, site-section-block.tsx, and section-highlight-list.tsx — a 90-minute refactor compressed to ~20 minutes."
+                  />
+                  <DevWorkflowCard
+                    title="Research → shipped features"
+                    desc="Competitive findings didn't sit in a PDF — they became the site. CAS-searchable catalog, TDS/SDS library, sustainability hub, and customer portal each trace back to a specific gap spotted across Brenntag, IMCD, and regional peers."
+                  />
+                </div>
+
+                <div className="mt-6 bg-site-surface-raised rounded-2xl px-5 py-5 overflow-x-auto transition-colors">
+                  <p className="text-[11px] font-bold tracking-[0.08em] uppercase text-site-label mb-4 transition-colors">
+                    App Router structure
+                  </p>
+                  <p className="font-mono text-sm text-white/60 leading-[1.8] whitespace-pre">
+{`app/
+├── industries/
+│   └── [segment]/
+│       └── page.tsx        ← one template, 8 segments
+├── about-us/
+│   └── page.tsx
+├── careers/
+│   └── page.tsx
+├── locations/              ← serves as Contact
+│   └── page.tsx
+└── products/               ← coming soon
+    └── [slug]/
+        └── page.tsx`}
+                  </p>
+                </div>
+
+                <SubHeading className="mt-10">What&apos;s live vs. in the queue</SubHeading>
+                <div className="mt-6 space-y-3">
+                  <PhaseBlock
+                    phase="Phase 1 — Foundation"
+                    timeline="Complete"
+                    items={[
+                      "Homepage with KPI stats, testimonials, and ISO callout",
+                      "All 8 industry pages with uniform template and product sub-categories",
+                      "About Us with world map, Ghobash Group section, and team grid",
+                      "Careers with live positions and application flow",
+                      "Contact / Locations — all 9 offices across 7 countries",
+                      "Language switcher UI (EN · AR · FR · SW · ID · HI)",
+                    ]}
+                  />
+                  <PhaseBlock
+                    phase="Phase 2 — Discovery"
+                    timeline="Next"
+                    items={[
+                      "Products catalog with CAS search",
+                      "TDS/SDS resource library",
+                      "Suppliers page with named, filterable cards",
+                      "Sustainability hub (ESG · EcoVadis · ISO scope)",
+                      "Arabic + French content",
+                    ]}
+                  />
+                  <PhaseBlock
+                    phase="Phase 3 — Engagement"
+                    timeline="Future"
+                    items={[
+                      "Customer portal (RFQ + document vault)",
+                      "Swahili / Bahasa / Hindi content",
+                      "Application guides per segment",
+                      "CoA on-request automation",
+                    ]}
+                  />
+                </div>
+
+                <div className="mt-6 bg-site-surface-raised rounded-2xl px-5 py-4 border border-site-accent/20 transition-colors">
+                  <p className="font-quattrocento font-bold text-site-fg text-[14px] tracking-[-0.02em] leading-snug transition-colors">
+                    Foundation live at{" "}
+                    <a
+                      href="https://tawazonredesign.vercel.app"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-site-accent underline underline-offset-2 decoration-[1.5px] hover:opacity-75 transition-opacity"
+                    >
+                      tawazonredesign.vercel.app
+                    </a>
+                    {" "}— homepage, all 8 industry segments, about, careers, and all 9 office locations. Product catalog, resource library, sustainability hub, supplier directory, and customer portal are in the build queue.
+                  </p>
+                </div>
+              </Section>
+
             </div>
           </div>
         </div>
@@ -709,6 +835,19 @@ function CompetitorCard({
       </div>
       <p className=" text-sm tracking-[-0.02em] leading-relaxed transition-colors">
         {differentiator}
+      </p>
+    </div>
+  );
+}
+
+function DevWorkflowCard({ title, desc }: { title: string; desc: string }) {
+  return (
+    <div className="bg-site-surface-raised rounded-2xl px-5 py-4 transition-colors">
+      <p className="font-quattrocento font-bold text-site-fg text-[14px] md:text-[15px] tracking-[-0.02em] mb-2 transition-colors">
+        {title}
+      </p>
+      <p className="font-quattrocento text-site-fg/60 text-sm tracking-[-0.02em] leading-snug transition-colors">
+        {desc}
       </p>
     </div>
   );

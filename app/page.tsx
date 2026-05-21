@@ -26,17 +26,16 @@ function ExternalLinkIcon() {
 // ─── Project Card ─────────────────────────────────────────────────────────────
 
 interface ProjectCardProps {
-  number: string;
   title: string;
   tags: string[];
   href?: string;
 }
 
-function ProjectCard({ number, title, tags, href }: ProjectCardProps) {
+function ProjectCard({ title, tags, href }: ProjectCardProps) {
   const card = (
-    <div className="relative overflow-hidden rounded-3xl bg-black dark:bg-site-project-card px-5 md:px-6 py-7 md:py-9 flex items-end justify-between h-[180px] md:h-[240px] cursor-pointer hover:opacity-90 transition-opacity">
+    <div className="relative overflow-hidden rounded-3xl bg-black dark:bg-site-project-card px-5 md:px-6 py-7 md:py-9 flex items-end h-[180px] md:h-[240px] cursor-pointer hover:opacity-90 transition-opacity">
       <div className="flex flex-col justify-between h-full">
-        <div className="flex gap-2">
+        <div className="flex flex-wrap gap-2">
           {tags.map((tag) => (
             <span key={tag}
               className="text-[10px] md:text-[11px] font-semibold tracking-wide text-white/70 border border-white/25 rounded px-2 md:px-2.5 py-0.5 md:py-1 uppercase"
@@ -49,12 +48,9 @@ function ProjectCard({ number, title, tags, href }: ProjectCardProps) {
           {title}
         </p>
       </div>
-      <span className="type-project-card-index absolute right-4 md:right-5 top-1/2 -translate-y-1/2 select-none leading-none">
-        {number}
-      </span>
     </div>
   );
-  return href ? <Link href={href}>{card}</Link> : card;
+  return href ? <Link href={href} className="block h-full">{card}</Link> : card;
 }
 
 // ─── Hero Section ─────────────────────────────────────────────────────────────
@@ -126,11 +122,11 @@ function HeroSection() {
           </p>
 
           {/* Project cards */}
-          <div className="flex flex-col gap-3">
-            <ProjectCard number="01" title="Tawazon Redesign" tags={["UX Research", "Design System", "Web"]} href="/portfolio/tawazon-redesign" />
-            <ProjectCard number="02" title="DOC – Health Services: The Providers" tags={["Case Study", "Healthcare"]} href="/portfolio/doc-health-services" />
-            <ProjectCard number="03" title="DOC – Health Services: The Users" tags={["Case Study", "Healthcare"]} href="/portfolio/doc-health-services-users" />
-            <ProjectCard number="04" title="QuickStop iOS" tags={["iOS", "End-to-End UX", "AI-Assisted"]} href="/portfolio/quickstop-ios" />
+          <div className="grid grid-cols-2 gap-3">
+            <ProjectCard title="QuickStop iOS" tags={["iOS", "End-to-End UX", "AI-Assisted"]} href="/portfolio/quickstop-ios" />
+            <ProjectCard title="Tawazon Redesign" tags={["UX Research", "Design System", "Web"]} href="/portfolio/tawazon-redesign" />
+            <ProjectCard title="DOC – Health Services: The Providers" tags={["Case Study", "Healthcare"]} href="/portfolio/doc-health-services" />
+            <ProjectCard title="DOC – Health Services: The Users" tags={["Case Study", "Healthcare"]} href="/portfolio/doc-health-services-users" />
           </div>
         </div>
       </div>
@@ -178,11 +174,11 @@ function HeroSection() {
 
           </p>
 
-          <div className="flex flex-col gap-4 max-w-[520px]">
-            <ProjectCard number="01" title="Tawazon Redesign" tags={["UX Research", "Design System", "Web"]} href="/portfolio/tawazon-redesign" />
-            <ProjectCard number="02" title="DOC – Health Services: The Providers" tags={["Case Study", "Healthcare"]} href="/portfolio/doc-health-services" />
-            <ProjectCard number="03" title="DOC – Health Services: The Users" tags={["Case Study", "Healthcare"]} href="/portfolio/doc-health-services-users" />
-            <ProjectCard number="04" title="QuickStop iOS" tags={["iOS", "End-to-End UX", "AI-Assisted"]} href="/portfolio/quickstop-ios" />
+          <div className="grid grid-cols-2 gap-4 max-w-[640px]">
+            <ProjectCard title="QuickStop iOS" tags={["iOS", "End-to-End UX", "AI-Assisted"]} href="/portfolio/quickstop-ios" />
+            <ProjectCard title="Tawazon Redesign" tags={["UX Research", "Design System", "Web"]} href="/portfolio/tawazon-redesign" />
+            <ProjectCard title="DOC – Health Services: The Providers" tags={["Case Study", "Healthcare"]} href="/portfolio/doc-health-services" />
+            <ProjectCard title="DOC – Health Services: The Users" tags={["Case Study", "Healthcare"]} href="/portfolio/doc-health-services-users" />
           </div>
         </div>
 
