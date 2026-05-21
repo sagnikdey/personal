@@ -124,7 +124,7 @@ function HeroSection() {
           {/* Project cards */}
           <div className="grid grid-cols-2 gap-3">
             <ProjectCard title="QuickStop iOS" tags={["iOS", "End-to-End UX", "AI-Assisted"]} href="/portfolio/quickstop-ios" />
-            <ProjectCard title="Tawazon Redesign" tags={["UX Research", "Design System", "Web"]} href="/portfolio/tawazon-redesign" />
+            <ProjectCard title="Tawazon Redesign" tags={["UX Research", "Design System", "AI-assisted Development"]} href="/portfolio/tawazon-redesign" />
             <ProjectCard title="DOC – Health Services: The Providers" tags={["Case Study", "Healthcare"]} href="/portfolio/doc-health-services" />
             <ProjectCard title="DOC – Health Services: The Users" tags={["Case Study", "Healthcare"]} href="/portfolio/doc-health-services-users" />
           </div>
@@ -176,7 +176,7 @@ function HeroSection() {
 
           <div className="grid grid-cols-2 gap-4 max-w-[640px]">
             <ProjectCard title="QuickStop iOS" tags={["iOS", "End-to-End UX", "AI-Assisted"]} href="/portfolio/quickstop-ios" />
-            <ProjectCard title="Tawazon Redesign" tags={["UX Research", "Design System", "Web"]} href="/portfolio/tawazon-redesign" />
+            <ProjectCard title="Tawazon Redesign" tags={["UX Research", "Design System", "AI-assisted Development"]} href="/portfolio/tawazon-redesign" />
             <ProjectCard title="DOC – Health Services: The Providers" tags={["Case Study", "Healthcare"]} href="/portfolio/doc-health-services" />
             <ProjectCard title="DOC – Health Services: The Users" tags={["Case Study", "Healthcare"]} href="/portfolio/doc-health-services-users" />
           </div>
