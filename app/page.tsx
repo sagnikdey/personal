@@ -130,6 +130,7 @@ function HeroSection() {
             <ProjectCard number="01" title="Tawazon Redesign" tags={["UX Research", "Design System", "Web"]} href="/portfolio/tawazon-redesign" />
             <ProjectCard number="02" title="DOC – Health Services: The Providers" tags={["Case Study", "Healthcare"]} href="/portfolio/doc-health-services" />
             <ProjectCard number="03" title="DOC – Health Services: The Users" tags={["Case Study", "Healthcare"]} href="/portfolio/doc-health-services-users" />
+            <ProjectCard number="04" title="QuickStop iOS" tags={["iOS", "End-to-End UX", "AI-Assisted"]} href="/portfolio/quickstop-ios" />
           </div>
         </div>
       </div>
@@ -181,6 +182,7 @@ function HeroSection() {
             <ProjectCard number="01" title="Tawazon Redesign" tags={["UX Research", "Design System", "Web"]} href="/portfolio/tawazon-redesign" />
             <ProjectCard number="02" title="DOC – Health Services: The Providers" tags={["Case Study", "Healthcare"]} href="/portfolio/doc-health-services" />
             <ProjectCard number="03" title="DOC – Health Services: The Users" tags={["Case Study", "Healthcare"]} href="/portfolio/doc-health-services-users" />
+            <ProjectCard number="04" title="QuickStop iOS" tags={["iOS", "End-to-End UX", "AI-Assisted"]} href="/portfolio/quickstop-ios" />
           </div>
         </div>
 

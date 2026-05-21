@@ -48,8 +48,8 @@ const portfolioItems: PortfolioItem[] = [
     tags: ["Mobile", "End-to-End UX", "iOS"],
     year: "2024",
     client: "Personal Project",
-    href: "#",
-    available: false,
+    href: "/portfolio/quickstop-ios",
+    available: true,
   },
 ];
 
@@ -139,12 +139,16 @@ export default function PortfolioPage() {
                 </div>
               );
 
-              return item.available ? (
-                <Link key={item.number} href={item.href}>
-                  {inner}
-                </Link>
-              ) : (
-                <div key={item.number}>{inner}</div>
+              return (
+                <div key={item.number}>
+                  {item.available ? (
+                    <Link href={item.href} className="block">
+                      {inner}
+                    </Link>
+                  ) : (
+                    inner
+                  )}
+                </div>
               );
             })}
           </div>
